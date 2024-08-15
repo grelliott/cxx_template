@@ -23,3 +23,6 @@ target_include_directories(${CMAKE_PROJECT_NAME}
         ${spdlog_INCLUDE_DIRS}
     )
 target_link_libraries(${CMAKE_PROJECT_NAME} spdlog::spdlog)
+
+enable_testing()
+add_subdirectory(test)

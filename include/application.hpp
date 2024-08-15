@@ -9,7 +9,6 @@
 
 #pragma once
 #include <atomic>
-#include "spdlog/spdlog.h"
 
 namespace ca::grantelliott::testapp {
 class Application {
