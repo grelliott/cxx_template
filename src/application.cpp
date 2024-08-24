@@ -14,15 +14,13 @@
 
 #include "log.hpp"
 
-using namespace std::chrono_literals;
-
 namespace ca::grantelliott::testapp {
+
+using namespace std::literals::chrono_literals;
 
 static constexpr auto NUMBER_OF_LOOPS = 1 * 10;
 
-Application::Application() : mRun{true} {
-    log::info("Creating Application");
-}
+Application::Application() : mRun{true} { log::info("Creating Application"); }
 
 Application::~Application() { log::info("Destroying Application"); }
 
