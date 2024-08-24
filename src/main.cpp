@@ -1,16 +1,28 @@
 
 #include "application.hpp"
-#include "spdlog/spdlog.h"
+#include "log.hpp"
+
+using namespace ca::grantelliott;
 
 int main(int argc, char *argv[]) {
     // initialize logging
-    spdlog::info("Starting program");
+    log::initialize();
 
-    ca::grantelliott::testapp::Application app {};
+    log::trace("Trace");
+    log::debug("Debug");
+    log::info("Info");
+    log::warn("Warn");
+    log::error("Error");
+    log::critical("Critical");
+
+    // read args and log to file or console
+    log::info("Starting program");
+
+    ca::grantelliott::testapp::Application app{};
     app.init();
 
     app.start();
 
-    spdlog::info("Terminating program");
+    log::info("Terminating program");
     app.terminate();
 }

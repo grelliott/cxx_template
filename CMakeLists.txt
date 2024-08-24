@@ -5,7 +5,8 @@ project(test_app)
 find_package(fmt REQUIRED)
 find_package(spdlog REQUIRED)
 
-add_executable( ${CMAKE_PROJECT_NAME} 
+add_executable( ${CMAKE_PROJECT_NAME}
+    src/log.cpp
     src/application.cpp
     src/main.cpp)
 
