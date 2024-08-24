@@ -4,7 +4,7 @@
  * Created Date: Thursday, August 15th 2024, 2:07:30 am
  * Author: Grant Elliott
  *
- * Copyright (c) 2024 Your Company
+ * Copyright (c) 2024 Grant Elliott
  */
 
 #include "application.hpp"

@@ -1,3 +1,11 @@
+/*
+ * Filename: /home/grant/src/test_c++/src/main.cpp
+ * Path: /home/grant/src/test_c++/src
+ * Created Date: Saturday, August 24th 2024, 5:59:00 am
+ * Author: Grant Elliott
+ * 
+ * Copyright (c) 2024 Grant Elliott
+ */
 
 #include "application.hpp"
 #include "log.hpp"
