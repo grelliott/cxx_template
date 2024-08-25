@@ -12,7 +12,7 @@
 
 namespace ca::grantelliott::testapp {
 class Application {
-   public:
+ public:
     Application();
     ~Application();
 
@@ -23,7 +23,7 @@ class Application {
     void start();
     void terminate() noexcept;
 
-   private:
+ private:
     std::atomic<bool> mRun;
 };
 }  // namespace ca::grantelliott::testapp

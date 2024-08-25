@@ -14,11 +14,9 @@
 #ifndef VERSION_HPP
 #define VERSION_HPP
 
-constexpr auto APP_VERSION{"0.0.3"};
-constexpr auto APP_DESCRIPTION{
-    "This is a boilerplate application that currently includes logging, and "
-    "command-line argument support"};
-constexpr auto COMMIT_ID{"a6418477b95ea121513dc5ba0f176e25874296d8"};
-constexpr auto BRANCH_NAME{"main"};
+constexpr auto APP_VERSION {"0.0.3"};
+constexpr auto APP_DESCRIPTION {"This is a boilerplate application that currently includes logging, and command-line argument support"};
+constexpr auto COMMIT_ID {"b804614c3c4a36828153742d44dadbf39eb9c807"};
+constexpr auto BRANCH_NAME {"main"};
 
 #endif

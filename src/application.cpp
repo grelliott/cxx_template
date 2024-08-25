@@ -21,11 +21,17 @@ using namespace std::literals::chrono_literals;
 
 static constexpr auto NUMBER_OF_LOOPS = 1 * 10;
 
-Application::Application() : mRun{true} { log::info("Creating Application"); }
+Application::Application() : mRun{true} {
+    log::info("Creating Application");
+}
 
-Application::~Application() { log::info("Destroying Application"); }
+Application::~Application() {
+    log::info("Destroying Application");
+}
 
-void Application::init() { log::info("Application::init"); }
+void Application::init() {
+    log::info("Application::init");
+}
 
 void Application::start() {
     log::info("Application::start");

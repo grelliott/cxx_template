@@ -14,6 +14,9 @@
 
 namespace ca::grantelliott::log {
 
-void initialize() { spdlog::set_level(spdlog::level::trace); }
+void initialize() {
+    spdlog::set_level(spdlog::level::trace);
+    spdlog::set_pattern("[%Y-%m-%d %H:%M:%S.%e] [%l] %v");
+}
 
 }  // namespace ca::grantelliott::log
