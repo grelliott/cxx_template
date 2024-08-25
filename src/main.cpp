@@ -16,11 +16,10 @@
 
 using namespace ca::grantelliott;
 
-int main(int argc, char* argv[]) {
-    // initialize logging
-    log::initialize();
+auto main(int argc, char* argv[]) -> int {
     argparse::ArgumentParser args("test_app", APP_VERSION);
     args.add_description(APP_DESCRIPTION);
+    // add logging-related arguments
 
     try {
         args.parse_args(argc, argv);
@@ -30,15 +29,8 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    log::trace("Trace");
-    log::debug("Debug");
-    log::info("Info");
-    log::warn("Warn");
-    log::error("Error");
-    log::critical("Critical");
-
-    // read args and log to file or console
-    log::info("Starting program");
+    // initialize logging
+    log::initialize();
 
     ca::grantelliott::testapp::Application app{};
     app.init();

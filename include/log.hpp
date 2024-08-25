@@ -17,6 +17,10 @@
 
 namespace ca::grantelliott::log {
 
+// Add options to
+// - set log-level
+// - log to stdout, file, etc
+// - set custom logfile name
 void initialize();
 
 struct location_and_format {

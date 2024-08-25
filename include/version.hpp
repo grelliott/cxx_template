@@ -16,7 +16,7 @@
 
 constexpr auto APP_VERSION {"0.0.3"};
 constexpr auto APP_DESCRIPTION {"This is a boilerplate application that currently includes logging, and command-line argument support"};
-constexpr auto COMMIT_ID {"b804614c3c4a36828153742d44dadbf39eb9c807"};
+constexpr auto COMMIT_ID {"d27aa2aebdc108bd92a535429e29bade388f81ca"};
 constexpr auto BRANCH_NAME {"main"};
 
 #endif
