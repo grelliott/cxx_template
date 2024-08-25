@@ -9,6 +9,7 @@
 
 #pragma once
 
+#include <filesystem>
 #include "fmt/format.h"
 #define SPDLOG_ACTIVE_LEVEL SPDLOG_LEVEL_TRACE
 #include "spdlog/sinks/stdout_sinks.h"
@@ -20,7 +21,7 @@ void initialize();
 
 struct location_and_format {
     constexpr location_and_format(char const* _format,
-                                  char const* _file_name = __builtin_FILE(),
+                                  char const* _file_name = std::filesystem::path(__builtin_FILE()).filename().c_str(),
                                   unsigned _line = __builtin_LINE()) noexcept
         : format{_format}, file_name{_file_name}, line{_line} {}
 
@@ -32,7 +33,7 @@ struct location_and_format {
 template <typename... Targs>
 inline auto msg(location_and_format format,
                 Targs const&... args) -> std::string_view {
-    return {fmt::format("{}:{}: ", format.file_name, format.line) +
+    return {fmt::format("[{}:{}] ", format.file_name, format.line) +
             fmt::vformat(
                 format.format,
                 fmt::make_format_args(std::forward<Targs const&>(args)...))};
