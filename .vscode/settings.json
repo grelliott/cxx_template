@@ -62,6 +62,10 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "*.in": "c"
+        "*.in": "c",
+        "list": "cpp",
+        "source_location": "cpp",
+        "iomanip": "cpp",
+        "ranges": "cpp"
     }
 }

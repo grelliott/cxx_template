@@ -8,6 +8,7 @@
  */
 
 #include <argparse/argparse.hpp>
+#include <exception>
 
 #include "application.hpp"
 #include "log.hpp"
@@ -24,7 +25,8 @@ int main(int argc, char* argv[]) {
     try {
         args.parse_args(argc, argv);
     } catch (const std::exception& err) {
-        log::critical("Failed to parse command-line arguments - {}", err.what());
+        log::critical("Failed to parse command-line arguments - {}",
+                      err.what());
         return 1;
     }
 

@@ -39,32 +39,32 @@ inline auto msg(location_and_format format,
 }
 
 template <typename... Targs>
-inline void trace(location_and_format format, Targs const&... args) {
+inline void trace(const location_and_format format, Targs const&... args) {
     SPDLOG_TRACE(msg(format, std::forward<Targs const&>(args)...));
 }
 
 template <typename... Targs>
-inline void debug(location_and_format format, Targs const&... args) {
+inline void debug(const location_and_format format, Targs const&... args) {
     SPDLOG_DEBUG(msg(format, std::forward<Targs const&>(args)...));
 }
 
 template <typename... Targs>
-inline void info(location_and_format format, Targs const&... args) {
+inline void info(const location_and_format format, Targs const&... args) {
     SPDLOG_INFO(msg(format, std::forward<Targs const&>(args)...));
 }
 
 template <typename... Targs>
-inline void warn(location_and_format format, Targs const&... args) {
+inline void warn(const location_and_format format, Targs const&... args) {
     SPDLOG_WARN(msg(format, std::forward<Targs const&>(args)...));
 }
 
 template <typename... Targs>
-inline void error(location_and_format format, Targs const&... args) {
+inline void error(const location_and_format format, Targs const&... args) {
     SPDLOG_ERROR(msg(format, std::forward<Targs const&>(args)...));
 }
 
 template <typename... Targs>
-inline void critical(location_and_format format, Targs const&... args) {
+inline void critical(const location_and_format format, Targs const&... args) {
     SPDLOG_CRITICAL(msg(format, std::forward<Targs const&>(args)...));
 }
 

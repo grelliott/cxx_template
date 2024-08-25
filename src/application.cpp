@@ -10,6 +10,7 @@
 #include "application.hpp"
 
 #include <chrono>
+#include <cstddef>
 #include <thread>
 
 #include "log.hpp"
@@ -28,14 +29,13 @@ void Application::init() { log::info("Application::init"); }
 
 void Application::start() {
     log::info("Application::start");
-    std::thread th{[&]() {
-        std::size_t i = 0;
-        while (++i < NUMBER_OF_LOOPS) {
+    std::thread worker_thread{[&]() {
+        for (std::size_t i = 0; i < NUMBER_OF_LOOPS; i++) {
             log::info(".");
             std::this_thread::sleep_for(250ms);
         }
     }};
-    th.join();
+    worker_thread.join();
 }
 
 void Application::terminate() noexcept {
