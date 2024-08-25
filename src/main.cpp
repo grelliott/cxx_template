@@ -18,13 +18,16 @@ using namespace ca::grantelliott;
 int main(int argc, char* argv[]) {
     // initialize logging
     log::initialize();
-    argparse::ArgumentParser args("test_app", VERSION);
+    argparse::ArgumentParser args("test_app", APP_VERSION);
+    args.add_description(APP_DESCRIPTION);
+
     try {
         args.parse_args(argc, argv);
     } catch (const std::exception& err) {
         log::critical("Failed to parse command-line arguments - {}", err.what());
         return 1;
     }
+
     log::trace("Trace");
     log::debug("Debug");
     log::info("Info");

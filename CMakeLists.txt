@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(test_app VERSION 0.0.3)
+project(test_app
+    VERSION 0.0.3
+    DESCRIPTION "This is a boilerplate application that currently includes logging, and command-line argument support"
+)
+
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
 set(VERSION_TEMPLATE ${PROJECT_SOURCE_DIR}/include/version.hpp.in)
